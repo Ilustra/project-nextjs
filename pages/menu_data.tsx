@@ -6,6 +6,12 @@ export const menu =   [
       route: '/Home'
     },
     {
+      type: 'link',
+      label: 'Botões',
+
+      route: '/Button'
+    },
+    {
     type: 'dropdown',
     label: 'Cadastros',
     icon: 'person',
@@ -13,24 +19,10 @@ export const menu =   [
     children: [
           {
             type: 'link',
-            label: 'Teste',
-            route: ''
+            label: 'Botões',
+            route: '/Button'
           },
-          {
-            type: 'link',
-            label: 'Teste',
-            route: ''
-          },
-          {
-            type: 'link',
-            label: 'Teste',
-            route: ''
-          },
-          {
-            type: 'link',
-            label: 'Teste',
-            route: ''
-          },
+
     ],
   },
 

@@ -1,13 +1,16 @@
 import styled from 'styled-components';
+import { Container } from '../components/packages';
 
 
-export const Container = styled.div`
+export const Containers = styled('div').attrs({className:"drop-shadow-md"})`
     height: 100vh;
     left: 0;
     position: relative;
+    z-index: 1;
     transition: .1s;
+    background-color: ${props => props.theme.colors.menu};
     width: ${(props: { expanedMenu: any }) => props.expanedMenu ? '200px' : '50px'};
-    background-color: #071f33;
+
     @media screen and (max-width: 600px) {
         position: absolute;
         transition: .2s;
@@ -56,16 +59,16 @@ export const Text = styled.span`
     display: ${(props: { visible: any; }) => props.visible ? 'none' : 'hiden'};
     transition: .1s;
 `;
-export const BodyMenu = styled.div`
+export const BodyMenu = styled.div.attrs({className:""})`
     height: 80vh;
     position: relative;
-    overflow: auto;
+    overflow: hidden;
     overflow-x: hidden;
     ::-webkit-scrollbar {
     width: 12px;               
     }
     ::-webkit-scrollbar-track {
-    background: #071f33;        
+    background: none;        
     }
     ::-webkit-scrollbar-thumb {
     background-color: #092b49;    

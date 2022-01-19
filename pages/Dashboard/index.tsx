@@ -6,6 +6,7 @@ import {  Container, Surface } from '../styled';
 
 import styled from 'styled-components';
 import TextField from '../components/text-fields/TextField';
+import TextFieldPass from '../components/text-fields/TextFieldPass';
 
 
 export const Div = styled.div`
@@ -23,31 +24,24 @@ export const Card = styled.div`
     height:${props => props.expaned ? '100vh':'95%'}; 
     top: ${props => props.expaned && '0px'};
     left: ${props => props.expaned && '0px'};
-    background-color: #fff; 
+
     position:${props => props.expaned ? 'fixed': 'relative'};
     border-radius: 5px;
     transition: .1s;
-
 `;
 
 export default function Dashboard(): JSX.Element {
     
-    const [expanedContainer, setExpanedContainer] = useState(false);
-
-    const handleExpand =()=>{
-            setExpanedContainer(!expanedContainer)
-    }
 
     return (
 
-                
-                <Card expaned={expanedContainer} style={{}}>
-                    <Icon title={expanedContainer ? 'voltar ao tamanho normal ' : 'expandir para tela interia'} style={{ fontSize: 16, color: '#c7c7c7'}} onClick={handleExpand}>{expanedContainer ? 'close_fullscreen ': 'open_in_full'}</Icon>
-                    <button ></button>
+                <Card style={{}}>
+
                     <TextField className='m-4' label='Usuário' />
                     <div className='row items-center flex'>
                     <TextField mode='outlined' className='m-4' label='CPF' />
                     <TextField className='m-4' label='Nascimento' />
+                    <TextFieldPass name='password' label='Password' />
                     </div>
                 </Card>
 

@@ -2,13 +2,14 @@ import Icon from '@material-ui/core/Icon';
 import { Key, useState } from 'react';
 
 import styled from 'styled-components';
+import { Container } from '../components/packages';
 
 
-export const Div = styled.div`
+
+export const Div = styled(Container).attrs({className:'drop-shadow-md '})`
+    background-color: ${props=> props.theme.colors.background};
     position: absolute;
     width: 100vw;
-    background-color: #fff;
-    box-shadow: 1px 2px 2px 1px #d4d4d4;
     height: 10vh;
 
 `;

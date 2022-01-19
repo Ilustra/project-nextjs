@@ -1,7 +1,9 @@
 import Icon from '@material-ui/core/Icon';
 import Link from 'next/link';
 import { Key, useState } from 'react';
-import { Container, BodyMenu, Ul, Li, A, ExpanedMenu, Text } from './styled';
+import { Button } from '../components/packages';
+
+import { Containers, BodyMenu, Ul, Li, A, ExpanedMenu, Text } from './styled';
 
 interface IMenu {
     menu: any[];
@@ -24,7 +26,7 @@ export default function Menu({ menu }: IMenu): JSX.Element {
     }
 
     return (
-        <Container expanedMenu={expanedMenu}>
+        <Containers expanedMenu={expanedMenu}>
             <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
             <div style={{ height: '10vh', padding: 10, border: 'solid', borderWidth: 'thin', borderColor: '#082a4b' }}>
 
@@ -65,10 +67,12 @@ export default function Menu({ menu }: IMenu): JSX.Element {
             </BodyMenu>
 
             <div style={{ padding: 5, position: 'absolute', bottom: 0, alignItems: 'center', display: 'flex', justifyContent: 'space-between', width: '100%', height: '5vh' }}>
-                {expanedMenu && <Icon style={{ fontSize: 20 }}>settings</Icon>}
+                {expanedMenu &&
+                <button  onClick={()=> console.log('click')}>   <Icon style={{ fontSize: 20 }}>settings</Icon></button>
+                }
                 <Icon onClick={() => setExpanedMenu(!expanedMenu)} style={{ marginRight: 15, fontSize: 38 }}>{expanedMenu ? 'arrow_left' : 'arrow_right'}</Icon>
             </div>
-        </Container>
+        </Containers>
 
     )
 }
