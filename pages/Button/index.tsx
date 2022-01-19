@@ -1,4 +1,4 @@
-import { Button,Text } from "../components/packages";
+import { Button, Text } from "../components/packages";
 
 interface IMenu {
     menu: any[];
@@ -13,7 +13,7 @@ export default function Buttons({ menu }: IMenu): JSX.Element {
 
     return (
         <div className="items-center justify-center flex flex-col ">
-                          <Text>Link</Text>
+                <Text>Link</Text>
                 <div className=" flex-row flex items-center justify-between" style={{width: 500, margin: 10,  padding: 10}}>
                     <Button     size='small'>small</Button>
                     <Button     disabled>Disabled</Button>
@@ -21,6 +21,7 @@ export default function Buttons({ menu }: IMenu): JSX.Element {
                     <Button     endIcon='send'>Send</Button>
                 </div> 
                 <Text>Simples</Text>
+                <a className=""></a>
                 <div className=" flex-row flex items-center justify-between" style={{width: 500, margin: 10,  padding: 10}}>
                     <Button mode='simpled'     size='small'>small</Button>
                     <Button mode='simpled'     disabled>Disabled</Button>

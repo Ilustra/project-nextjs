@@ -6,7 +6,7 @@ const variantComponent: any = {
     standard: 'Input',
     filled: 'FilledInput',
     outlined: 'OutlinedInput',
-  };
+};
 
   
 const TextField = React.forwardRef(function TextField(inProps: any,) {
